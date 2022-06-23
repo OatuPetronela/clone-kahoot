@@ -1,12 +1,19 @@
+import {Route, Routes} from 'react-router-dom';
+import {AuthContextProvider} from 'features/Auth/Auth.context';
+import {Login, Register} from 'features/Auth';
+import {AnonymousLayout} from 'layouts';
 
 function App() {
-return(
-  <>
-     <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
-  </>
-)
+    return (
+        <AuthContextProvider>
+            <Routes>
+                <Route path="/" element={< AnonymousLayout />}>
+                    <Route path="" element={< Login />}/>
+                    <Route path="register" element={< Register />}/>
+                </Route>
+            </Routes>
+        </AuthContextProvider>
+    );
 }
 
 export default App;
