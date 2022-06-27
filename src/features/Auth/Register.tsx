@@ -56,9 +56,17 @@ export function Register() {
       body: JSON.stringify(payload),
     }).then((res) => res.json());
 
-    // const { token, user } = data;
-    login(data);
-    navigate('/');
+    try{
+      if(data.error){
+        throw new Error(data.error);
+      }
+      login(data.token);
+      navigate('/');
+
+    }catch(err){
+      console.log(err);
+
+    }
   }
 
   return (

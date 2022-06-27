@@ -1,3 +1,11 @@
 {
-    "users": []
-  }
+  "users": [
+    {
+      "email": "test@test.com",
+      "password": "$2a$10$Q7gc6y1cNojafYuvBRzyVek7uU9FTSWqdq7xy9wCxD0zgKjPJvOSi",
+      "fName": "test1",
+      "lName": "test3",
+      "id": 1
+    }
+  ]
+}

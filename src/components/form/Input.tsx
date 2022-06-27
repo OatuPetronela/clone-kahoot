@@ -36,7 +36,7 @@ export function Input({
         {...register(name)}
       />
       {errors[name] && (
-        <span className="text-red-800">{errors[name].message}</span>
+        <span className="text-green-800">{errors[name].message}</span>
       )}
     </div>
   );

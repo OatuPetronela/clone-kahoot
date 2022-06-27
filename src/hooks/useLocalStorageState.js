@@ -2,6 +2,7 @@ import { useCallback, useEffect, useState } from 'react';
 
 function updateStorage(key, value) {
   if (window?.localStorage) {
+    console.log(value);
     window.localStorage.setItem(key, JSON.stringify(value));
   }
 }
@@ -11,6 +12,7 @@ function retriveFromStorage(key) {
     const val = window.localStorage.getItem(key);
 
     if (val) {
+      console.log(val)
       return JSON.parse(val);
     }
   }

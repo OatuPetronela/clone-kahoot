@@ -1,4 +1,4 @@
-import { FullLogo } from 'components/logo/Logo';
+import { FullLogo } from 'components/logo';
 import { Outlet } from 'react-router-dom';
 
 export const AnonymousLayout: React.FunctionComponent<{}> = () => {
